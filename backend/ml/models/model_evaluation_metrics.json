@@ -1,0 +1,157 @@
+{
+  "dataset_size": 64,
+  "train_size": 48,
+  "test_size": 16,
+  "classes": {
+    "0": "Legitimate / Safe",
+    "1": "Fraud / Suspicious"
+  },
+  "comparisons": {
+    "TF-IDF": {
+      "Multinomial Naive Bayes": {
+        "accuracy": 0.75,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1_score": 0.8,
+        "confusion_matrix": [
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "true_negatives": 4,
+        "false_positives": 4,
+        "false_negatives": 0,
+        "true_positives": 8
+      },
+      "Logistic Regression": {
+        "accuracy": 0.6875,
+        "precision": 0.6154,
+        "recall": 1.0,
+        "f1_score": 0.7619,
+        "confusion_matrix": [
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "true_negatives": 3,
+        "false_positives": 5,
+        "false_negatives": 0,
+        "true_positives": 8
+      },
+      "Support Vector Machine": {
+        "accuracy": 0.875,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1_score": 0.8889,
+        "confusion_matrix": [
+          [
+            6,
+            2
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "true_negatives": 6,
+        "false_positives": 2,
+        "false_negatives": 0,
+        "true_positives": 8
+      },
+      "Voting Ensemble (MNB+LR+SVM)": {
+        "accuracy": 0.875,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1_score": 0.8889,
+        "confusion_matrix": [
+          [
+            6,
+            2
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "true_negatives": 6,
+        "false_positives": 2,
+        "false_negatives": 0,
+        "true_positives": 8
+      }
+    },
+    "Bag-of-Words": {
+      "Multinomial Naive Bayes": {
+        "accuracy": 0.8125,
+        "precision": 0.7273,
+        "recall": 1.0,
+        "f1_score": 0.8421,
+        "confusion_matrix": [
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "true_negatives": 5,
+        "false_positives": 3,
+        "false_negatives": 0,
+        "true_positives": 8
+      },
+      "Logistic Regression": {
+        "accuracy": 0.9375,
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1_score": 0.9333,
+        "confusion_matrix": [
+          [
+            8,
+            0
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "true_negatives": 8,
+        "false_positives": 0,
+        "false_negatives": 1,
+        "true_positives": 7
+      },
+      "Support Vector Machine": {
+        "accuracy": 0.875,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1_score": 0.8571,
+        "confusion_matrix": [
+          [
+            8,
+            0
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "true_negatives": 8,
+        "false_positives": 0,
+        "false_negatives": 2,
+        "true_positives": 6
+      }
+    }
+  },
+  "best_model": "Voting Ensemble (MNB + LR + SVM) on TF-IDF",
+  "advisory": "Evaluation performed on labelled benchmark dataset. Real-world fraud tactics evolve; continuous auditing and user education remain crucial."
+}
